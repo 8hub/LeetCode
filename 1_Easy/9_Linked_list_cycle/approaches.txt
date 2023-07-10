@@ -1,0 +1,13 @@
+0
+make a two pointers:
+fast jump 'n' times to next node
+slow jump 'n-1' times to next node
+
+1st
+Max nr of elements is 10000, if there is a loop
+in list max iterations would be >10000
+
+2nd
+save each head in array, and iterate through
+each node. If current node is in array: return true
+
