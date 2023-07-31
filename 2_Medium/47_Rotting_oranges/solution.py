@@ -20,6 +20,9 @@ class Solution:
         
         # infect neighboors of rotten oranges and update set of rotten
         # oranges to new fresly rotten oranges
+        '''deque would be faster than set of tuples
+        1. append existing rotten to deque
+        2. for range(len(rotten)): rotten.popleft()'''
         def infectNeighboors() -> None:
             nonlocal rotten
             new_rottens = set()
