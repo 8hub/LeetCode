@@ -30,7 +30,7 @@ class Solution:
                 infectOrange(each[0],each[1]+1, new_rottens)
             rotten = new_rottens
 
-        # create a set of typles with coordinates of rotten oranges (x,y)
+        # create a set of tuples with coordinates of rotten oranges (x,y)
         def find_rotten() -> None:
             for y in range(len(grid)):
                 for x in range(len(grid[0])):
