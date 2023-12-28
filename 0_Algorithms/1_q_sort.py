@@ -1,14 +1,10 @@
-def q_sort(array: list):
-    if len(array) < 2:
-        return array
-    pivot = array[len(array)//2]
-    l_arr = []
-    r_arr = []
-    for each in array:
-        if each < pivot:
-            l_arr.append(each)
-        elif each > pivot:
-            r_arr.append(each)
-    return q_sort(l_arr) + [pivot] + q_sort(r_arr)
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
 
-print(q_sort([2,1,6,4,5,3]))
+print(quicksort([3,6,8,10,1,2,1]))
